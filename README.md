@@ -7,8 +7,10 @@ Before usage, grant execution permission to the script:
 
 ```bash
 chmod +x run_patches
+```
 
 ### Execution
 
 ```bash
 ./run_patches <structurecalculation_folder_name> <N or C or NC>
+```
