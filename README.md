@@ -11,6 +11,8 @@ chmod +x run_patches
 
 ### Execution
 
+Substitute the <> content for the real names, such as: ./run_patches folder01 C
+
 ```bash
 ./run_patches <structurecalculation_folder_name> <N or C or NC>
 ```
