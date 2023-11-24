@@ -1,0 +1,53 @@
+﻿#N-terminal and C-terminal Modifications (CCPN Analysis/Aria2.3)
+
+#Authors: Santos, B.P.O; Silva, B.M.; de Magalhães, M.T.Q.LBM, UFMG, Brazil.
+
+#How it was based? Aria2.3 gives the option of changing CTER to CTN in its topology file.
+#However, this C-terminal addition does not communicate with CCPN project, because they don’t have the amidation atoms in their residues.
+#To overcome this, we added the Nh3 molecule in the CCPN project, and created a new residue in ARIA/CNS files, correcting the angles and torsions, so now, 
+#both programs can interact and perform the structure calculation.
+
+#Installation
+
+LINUX
+
+Copy this directory to where the aria file (.xml) is located.
+
+1) In the shell, type:
+
+chmod 755 install
+sudo ./install
+chmod +x ../run_patches
+
+2) Observe that, depending where the CCPN or ARIA are installed, the paths need to be changed. Here, we assume they are installed in /usr/local/ 
+
+
+#Method
+
+Setting up CCPN Analysis project:
+
+1. In the CCPN project, go to > molecule and add at the beggining of your sequence the Acy or/and at the end of your sequence the Nh3 (don’t worry, in the sequence, stays Nh2);
+
+
+2. Setting up ARIA2.3 project, in Molecule:
+Linkage definition> topallhdg5.3.pep
+Parameter Definition > parallhdg5.3.pro
+Topology Definition > topallhdg5.3.pro
+
+
+After set up your Aria file, a .xml format file, type the command:
+        >tcsh
+        >aria2 -s <your_aria_file.xml>
+        >./run_patches <name_of_the_structure_calculation_folder> <N or C or NC>
+
+#Ex1: ./run_patches folder01 N (will generate N-terminal acetylated peptides)
+#Ex2: ./run_patches folder01 C (will generate C-terminal amidated peptides)
+#Ex3: ./run_patches folder01 NC (will generate N-terminal acetylated and C-terminal amidated peptides)
+
+Those files will be changed:
+topallhdg5.3.pep
+parallhdg5.3.pro
+topallhdg5.3.pro
+
+	> aria2 <your_aria_file.xml>
+Start of the structure calculation

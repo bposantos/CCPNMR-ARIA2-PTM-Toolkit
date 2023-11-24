@@ -1,0 +1,28 @@
+#!/bin/bash
+#
+#===================================================
+#Observation:
+#Change the CCPN and ARIA paths according to your installation. Here, we assume they are installed in /usr/local/ and  cns is installed inside ARIA path.
+#
+#Authors: Santos, BPO; Silva, BM; Quezado, MTQ.
+#Institution: LBM, UFMG, Brazil
+#
+#Before usage, type on linux shell:
+#       sudo chmod 777 install
+#
+#Mode of use:
+#       sudo ./install
+#
+#===================================================
+
+#Those are the files that need to be modified in CCPN and ARIA
+
+cp AminoAcid.py /usr/local/aria2.3/src/py/aria/legacy/
+cp atomnames.xml /usr/local/aria2.3/src/py/data/
+cp iupac.xml /usr/local/aria2.3/src/py/data/
+cp other+Nh3+ChemBuild_tjs23_2011-03-14-23-20-04-832_00001.xml /usr/local/ccpnmr/ccpnmr2.4/data/ccp/molecule/ChemComp/
+cp other+Acy+ChemBuild_tjs23_2011-03-14-23-20-23-515_00001.xml /usr/local/ccpnmr/ccpnmr2.4/data/ccp/molecule/ChemComp/
+
+#Before ending, the script run_patches in copied to the antecessor folder, assuming the zip file was uncompressed at the same place where your aria.xml file is.
+
+cp run_patches ../
