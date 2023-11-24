@@ -4,14 +4,14 @@
 #Description:
 #This script must be at the same place your ARIA file (.xml) that will be used for structure calculation
 #
-#Authors: Santos, BPO; Silva, BM; Quezado, MTQ.
+#Authors: Santos, BPO; Quezado, MTQ.
 #Institution: LBM, UFMG, Brazil
 #
 #Before usage, type on linux shell:
 #	chmod +x run_patches
 #
 #Mode of use:
-#	./run_patches ariafile.xml structurecalculation_folder_name
+#	./run_patches <structurecalculation_folder_name> <N or C or NC>
 #
 #===================================================
 
