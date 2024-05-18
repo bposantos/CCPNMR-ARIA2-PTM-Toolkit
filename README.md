@@ -12,10 +12,17 @@ Before usage, grant execution permission to the script:
 chmod +x run_patches
 ```
 
-### Execution
-
-Substitute the <> content for the real names, such as: ./run_patches folder01 C
+### Instalation
+Move run_patches and the peptide_modification/ folder to /usr/local/bin/
 
 ```bash
-./run_patches <structurecalculation_folder_name> <N or C or NC>
+mv run_patches peptide_modification /usr/local/bin/
+```
+
+### Execution
+
+Substitute the <> content for the real names, such as: run_patches folder01 C
+
+```bash
+run_patches <structurecalculation_folder_name> <N or C or NC>
 ```
