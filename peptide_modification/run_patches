@@ -11,7 +11,7 @@
 #	chmod +x run_patches
 #
 #Mode of use:
-#	./run_patches ariafile.xml structurecalculation_folder_name
+#	run_patches ariafile.xml structurecalculation_folder_name
 #
 #===================================================
 
@@ -20,22 +20,22 @@ topdir=${1:-.}
 
 modx=$2
 
-cp peptide_modification/topallhdg5.3.pro "$topdir"/run1/cns/toppar/
-cp peptide_modification/parallhdg5.3.pro "$topdir"/run1/cns/toppar/
+cp /usr/local/bin/peptide_modification/topallhdg5.3.pro "$topdir"/run1/cns/toppar/
+cp /usr/local/bin/peptide_modification/parallhdg5.3.pro "$topdir"/run1/cns/toppar/
 
 #===================================================
 
 #N-terminal Acetylation
 if [[ $modx == "N" ]]; then
-    cp peptide_modification/n_term_acet/topallhdg5.3.pep "$topdir"/run1/cns/toppar/
+    cp /usr/local/bin/peptide_modification/n_term_acet/topallhdg5.3.pep "$topdir"/run1/cns/toppar/
 fi
 
 #C-terminal Amidation
 if [[ $modx == "C" ]]; then
-    cp peptide_modification/c_term_amid/topallhdg5.3.pep "$topdir"/run1/cns/toppar/
+    cp /usr/local/bin/peptide_modification/c_term_amid/topallhdg5.3.pep "$topdir"/run1/cns/toppar/
 fi
 
 #N-terminal and C-terminal modifications
 if [[ $modx == "NC" ]]; then
-    cp peptide_modification/n_term_c_term/topallhdg5.3.pep "$topdir"/run1/cns/toppar/
+    cp /usr/local/bin/peptide_modification/n_term_c_term/topallhdg5.3.pep "$topdir"/run1/cns/toppar/
 fi
