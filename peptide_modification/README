@@ -40,9 +40,9 @@ After set up your Aria file, a .xml format file, type the command:
         >aria2 -s <your_aria_file.xml>
         >./run_patches <name_of_the_structure_calculation_folder> <N or C or NC>
 
-#Ex1: ./run_patches folder01 N (will generate N-terminal acetylated peptides)
-#Ex2: ./run_patches folder01 C (will generate C-terminal amidated peptides)
-#Ex3: ./run_patches folder01 NC (will generate N-terminal acetylated and C-terminal amidated peptides)
+#Ex1: run_patches folder01 N (will generate N-terminal acetylated peptides)
+#Ex2: run_patches folder01 C (will generate C-terminal amidated peptides)
+#Ex3: run_patches folder01 NC (will generate N-terminal acetylated and C-terminal amidated peptides)
 
 Those files will be changed:
 topallhdg5.3.pep
